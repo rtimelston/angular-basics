@@ -1,4 +1,6 @@
 <button class="btn but-primary"
   [disabled]="!allowNewServer">Add Server</button>
+<p>{{ allowNewServer }}</p> <!-- string interpolation -->
+<p [innerText]="allowNewServer"></p> <!-- property binding -->
 <app-server></app-server>
 <app-server></app-server>
