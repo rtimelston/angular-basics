@@ -12,4 +12,13 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   name = 'Angular Basics';
+  username = 'Unknown'
+
+  onUsernameChange(event: Event) {
+    this.username = (<HTMLInputElement>event.target).value;
+  }
+
+  onClearUsername() {
+    this.username = '';
+  }
 }

@@ -1,7 +1,17 @@
 <div class="container">
   <div class="row">
     <div class=".col-xs-12">
-      <p>{{ name }}</p>
+      <p>App name: {{ name }}</p>
+      <label>Username: </label>
+      <input
+        type="text"
+        class="form-control"
+      [(ngModel)]="username"> <!-- FormsModule must be imported in app.module.ts to use ngModel -->
+      <p>Changed username: {{ username }}</p>
+      <button
+        class="btn but-primary"
+        [disabled]="username === ''"
+        (click)="onClearUsername()">Clear Username</button>
       <hr>
       <app-servers></app-servers>
     </div>
