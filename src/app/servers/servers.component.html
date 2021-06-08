@@ -1,8 +1,8 @@
-<label>Server name (not two-way bound)</label>
-<input
-  type="text"
-  class="form-control"
-  (input)="onUpdateServerName($event)">
+<!--<label>Server name (not two-way bound)</label>-->
+<!--<input-->
+<!--  type="text"-->
+<!--  class="form-control"-->
+<!--  (input)="onUpdateServerName($event)">-->
 <label>Server name (two-way bound)</label>
 <input
   type="text"
@@ -11,7 +11,7 @@
 <button class="btn but-primary"
   [disabled]="!allowNewServer"
   (click)="onCreateServer()">Add Server</button>
-<p>{{ serverName }}</p>
+<!--<p>{{ serverName }}</p>-->
 <p>{{ allowNewServer }}</p> <!-- string interpolation -->
 <!--<p [innerText]="allowNewServer"></p> &lt;!&ndash; property binding &ndash;&gt;-->
 <p>{{ serverCreationStatus }}</p>
