@@ -4,3 +4,17 @@
 >
   Server with ID {{ serverId }} is {{ getServerStatus() }}
 </p>
+<hr>
+<button class="btn btn-primary"
+(click)="onToggleDetails()">
+  Display Details
+</button>
+<p *ngIf="!hideDetails">Server type: Linux</p>
+<div>
+  <p *ngFor="let log of logs; index as i"
+     [ngStyle]="i >= 4 ? {'background-color': 'blue', 'color': 'white'} : {}">
+    {{ i+1 }} {{ log }}
+  </p>
+</div>
+<hr>
+
